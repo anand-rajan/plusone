@@ -1,0 +1,69 @@
+Cartesian pattern:
+
+1) [ x= y= i ] => forms diagonal
+
+2) x * (x*Math.pow(x,4)) => forms slope
+
+3)Right angle Triangle mantra SOH, CAH, TOA.
+	SOH=> sin = opposite/hypotenuse
+	cAH=> cos = adjacent/hypotenuse
+	TOA=> tangent = opposite/adjacent
+	
+	Not a right angle triangle, then use pythagorus therom to find length of longer side of triangle(the one with $ sign below)
+	 a
+	----
+    |  /
+  b | $ c 
+	|/
+		phythogrous therom:
+			c-square = a-sq + b-sq;
+			
+		//moving the square on c to RHS,
+		c = sqrt( (a*a)+(b*b) )
+	
+4) Draw circle:
+		x = cx + cos(rad)*Radius
+		y = cy + sin(rad)*Radius
+		cx,cy =>center of circle
+		rad => radient of circle, incremented from 0 to 2*Math.PI, for instance u want 0 -> 2.PI in 15 steps, then, 360/15.
+
+		Note: Math.sin() & Math.cos() takes radian as param not deg. So we need to convert deg to radian before passing it.
+
+Angle To Radian:
+			radianVal = (Math.PI/180) * angle_in_degree; |or| 2*PI*(deg/360);
+
+Radian to Angle:
+			DegreeVal = radianVal * (180 / Math.PI);
+	
+5) Draw half sine wave:
+	x = some constant incremented value;
+	y = starting_y_val * Math.sin(counter); //counter => range from 0 to incremented with step, for 100 iteration i.e., step = Math.PI/100
+	
+6) Draw Pologan (any number of face based on n value)
+
+	context.moveTo(x+Math.sin(radiant_angle)*Radius, y-Math.cos(radiant_angle)*Radius);
+	delta = 2*Math.PI/n
+	for(var i=0;i<n;i++)
+	{
+		radiant_angle += delta
+		context.lineTo(x+Math.sin(radiant_angle)*Radius, y-Math.cos(radiant_angle)*Radius);
+	}
+
+7) Farenheit and Celsius Formula:
+
+	Celsius = (F-32)*5/9
+	
+8) Mean and Variance:
+	Ex: 2,3,4,7
+	Mean is the average of given values, Hence for given values, Mean=(2+3+4+7)/4 = 4.
+	
+	Variance is average of squared difference of values, means subtract the mean and then square the resul, take the average finally.
+	2-4 = -2*-2 = 4
+	3-4 = -1*-1 = 1
+	4-4 = 0
+	7-4 = 3*3 = 9
+	
+	variance = (4+1+0+9)/4 = 3.5
+	
+	
+	
